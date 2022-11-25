@@ -1,0 +1,162 @@
+﻿@page "/"
+
+@using System.Text.RegularExpressions;
+@using System.Globalization;
+@using Task_5.Models
+@using Task_5.Services
+
+@inject IJSRuntime JSRuntime;
+
+
+<PageTitle>Task_5</PageTitle>
+<div class="row"  >
+    <div class="col-4">
+        <a href="/" @onclick="@(()=>{SwitchRegion(Region.pl);})">
+            <img  id="countryFlag" src="/pl.svg" />
+        </a>
+        <a href="/" class="m-2" @onclick="@(()=>{SwitchRegion(Region.lv);})">
+            <img id="countryFlag" src="/lv.svg"  />
+        </a>
+        <a href="/" @onclick="@(()=>{SwitchRegion(Region.fr);})">
+            <img id="countryFlag" src="/fr.svg" />
+        </a>
+    </div>
+    <div class="col-4 text-center">
+        <h1> @_currentRegionName </h1>
+    </div>
+</div>
+<div class="d-flex d-row align-items-center ">
+    <div class="col-4 input-group " style="width: 33%">
+        <div class="input-group-prepend ">
+              <span class="input-group-text" id="inputGroup-sizing-default">Seed</span>
+        </div>
+        <input placeholder="Seed" type="number"  class="form-control" max="214748364" min="-214748364"
+        value="@_currentSeed"  @oninput="@((ChangeEventArgs e) =>{SeedIsChangedEventHandler(e.Value.ToString());})"/>
+    </div>
+    <div  class="col-4 px-4" style="width: 34%">
+        <label for="customRange3" class="form-label">Amount of mistakes</label>
+        <input type="range" value="@_currentAmountOfMistakes" class="form-range" min="0" max="10" step="0.25" id="customRange3"
+        @onchange="@((ChangeEventArgs e) =>{MistakesCountIsChangedHandler(e.Value.ToString());})">
+    </div>
+    <div class="col-4 input-group" style="width: 33%">
+        <input placeholder="Seed" type="number"  class="form-control" max="1000" min="0"
+        value="@_currentAmountOfMistakes"  @oninput="@((ChangeEventArgs e) =>{MistakesCountIsChangedHandler(e.Value.ToString());})"/>
+        <div class="input-group-prepend ">
+              <span class="input-group-text" id="inputGroup-sizing-default">Mistakes</span>
+        </div>
+    </div>
+</div>
+<div   id="fakeDataTable">
+    <div class="  overflow-auto" id="scrollWindow" style="height: 60vh; " @onscroll="GeneratePersonsIfNecessary" >
+        <div class="d-flex flex-row text-center pt-2 d-flex align-items-center sticky-top   " id="tableHeader" >
+            <div class="d-none d-sm-block col-sm-1  " id="usersHeaderCol"><h5>№</h5></div>
+            <div class="d-none d-sm-block col-sm-4 col-md-3" id="usersHeaderCol"><h5>ID</h5></div>
+            <div class="col-6 col-sm-3 col-md-3 font-weight-bold" id="usersHeaderCol"><h5>Fullname</h5></div>
+            <div class="col-6 col-sm-4 col-md-3" id="usersHeaderCol"><h5>Address</h5></div>
+            <div class="d-none d-md-block col-md-2" id="usersHeaderCol"><h5>Phone</h5></div>
+        </div>
+        @foreach (var person in @_persons)
+        {
+                <div class="d-flex flex-row text-center   align-items-center border-top"  >
+                  <div class="d-none d-sm-block col-sm-1" id="usersCol">@person.Num </div>
+                  <div class=" d-none d-sm-block col-sm-4 col-md-3" id="usersCol">@person.Id</div>
+                  <div class="col-6 col-sm-3 col-md-3" id="usersCol">@person.Fullname</div>
+                  <div class="col-6 col-sm-4 col-md-3"id="usersCol">@person.FullAddress</div>
+                  <div class="d-none d-md-block col-md-2" id="usersCol">@person.PhoneNumber</div>
+                </div>
+        }
+        <div id="scrollBottom" style="height: 10vh;"> </div>
+    </div>
+</div>
+
+
+@code {
+
+    private List<PersonModel> _persons = new();
+    private PersonGeneratorService _personGeneratorService = new();
+
+    private const int INIT_PERSONS_AMOUNT = 20;
+    private const int DEFAULT_AMOUNT_OF_GENERATED_PER_SCROLL_PERSONS = 10;
+    private const int DEFAULT_SEED = 123;
+
+    private const Region DEFAULT_REGION = Region.pl;
+    private const string REGION_PL_NAME = "POLAND";
+    private const string REGION_FR_NAME = "FRANCE";
+    private const string REGION_LV_NAME = "LATVIA";
+
+    private int _currentSeed { get; set; } = DEFAULT_SEED;
+    private Region _currentRegion { get; set; }
+    private string _currentRegionName { get; set; } = "";
+    private int _currentAmountOfMistakes { get; set; } = 0;
+
+    private void SwitchRegion(Region region)
+    {
+        if (_currentRegion == region)
+            return;
+        _currentRegion = region;
+        switch (_currentRegion)
+        {
+            case Region.pl:
+                _currentRegionName = REGION_PL_NAME;
+                break;
+            case Region.fr:
+                _currentRegionName = REGION_FR_NAME;
+                break;
+            case Region.lv:
+                _currentRegionName = REGION_LV_NAME;
+                break;
+        }
+        InitNewPersonsList();
+    }
+
+    private void MistakesCountIsChangedHandler(string input)
+    {
+        int parsedInput = (int)Math.Round(Double.Parse(input, CultureInfo.InvariantCulture));
+        if (parsedInput >= 0 && parsedInput <= 1000)
+            _currentAmountOfMistakes = parsedInput;
+        InitNewPersonsList();
+    }
+
+    private void SeedIsChangedEventHandler(string input)
+    {
+        if (input.Length < 1)
+        {
+            _currentSeed = DEFAULT_SEED;
+            InitNewPersonsList();
+            return;
+        }
+        input = input.Length > 9 ? input.Substring(0, 9) : input;
+        long parsedInput = Int64.Parse(input);
+        if (!(parsedInput < Int32.MaxValue && parsedInput > Int32.MinValue))
+            return;
+        int parsedInt = (int)parsedInput;
+        if (_currentSeed == parsedInt)
+            return;
+        _currentSeed = parsedInt;
+        InitNewPersonsList();
+    }
+
+    private void InitNewPersonsList()
+    {
+        _persons = _personGeneratorService.GeneratePersons(_currentSeed, _currentRegion, INIT_PERSONS_AMOUNT, _currentAmountOfMistakes);
+    }
+    private void AddPersons()
+    {
+        _persons = _personGeneratorService.GeneratePersons(_currentSeed, _currentRegion, DEFAULT_AMOUNT_OF_GENERATED_PER_SCROLL_PERSONS, _currentAmountOfMistakes);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        SwitchRegion(DEFAULT_REGION);
+    }
+
+    private async void GeneratePersonsIfNecessary()
+    {
+        if (await JSRuntime.InvokeAsync<Boolean>("isBottomOfScroll"))
+        {
+            AddPersons();
+        }
+    }
+
+}
+
