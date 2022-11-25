@@ -24,6 +24,7 @@
     <div class="col-4 text-center">
         <h1> @_currentRegionName </h1>
     </div>
+    
 </div>
 <div class="d-flex d-row align-items-center ">
     <div class="col-4 input-group " style="width: 33%">
@@ -32,6 +33,9 @@
         </div>
         <input placeholder="Seed" type="number"  class="form-control" max="214748364" min="-214748364"
         value="@_currentSeed"  @oninput="@((ChangeEventArgs e) =>{SeedIsChangedEventHandler(e.Value.ToString());})"/>
+        <div class="input-group-prepend ">
+                <button class="btn btn-secondary" id="inputGroup-sizing-default" @onclick="GenerateRandomSeed">Random</button>
+        </div>
     </div>
     <div  class="col-4 px-4" style="width: 34%">
         <label for="customRange3" class="form-label">Amount of mistakes</label>
@@ -39,15 +43,15 @@
         @onchange="@((ChangeEventArgs e) =>{MistakesCountIsChangedHandler(e.Value.ToString());})">
     </div>
     <div class="col-4 input-group" style="width: 33%">
-        <input placeholder="Seed" type="number"  class="form-control" max="1000" min="0"
-        value="@_currentAmountOfMistakes"  @oninput="@((ChangeEventArgs e) =>{MistakesCountIsChangedHandler(e.Value.ToString());})"/>
+        <input placeholder="Mistakes" type="number" step="0.25"  class="form-control" max="1000" min="0"
+           @oninput="@((ChangeEventArgs e) =>{MistakesCountIsChangedHandler(e.Value.ToString());})"/>
         <div class="input-group-prepend ">
               <span class="input-group-text" id="inputGroup-sizing-default">Mistakes</span>
         </div>
     </div>
 </div>
 <div   id="fakeDataTable">
-    <div class="  overflow-auto" id="scrollWindow" style="height: 60vh; " @onscroll="GeneratePersonsIfNecessary" >
+    <div class="  overflow-auto" id="scrollWindow" style="height: 50vh; " @onscroll="GeneratePersonsIfNecessary" >
         <div class="d-flex flex-row text-center pt-2 d-flex align-items-center sticky-top   " id="tableHeader" >
             <div class="d-none d-sm-block col-sm-1  " id="usersHeaderCol"><h5>№</h5></div>
             <div class="d-none d-sm-block col-sm-4 col-md-3" id="usersHeaderCol"><h5>ID</h5></div>
@@ -65,8 +69,14 @@
                   <div class="d-none d-md-block col-md-2" id="usersCol">@person.PhoneNumber</div>
                 </div>
         }
-        <div id="scrollBottom" style="height: 10vh;"> </div>
+        <div id="scrollBottom" > </div>
     </div>
+</div>
+<div class="row ">
+    <div class="col-3 d-flex offset-9">
+            <button class="btn btn-success my-2 " @onclick="GetCsvFile">Export to csv</button>
+    </div>
+       
 </div>
 
 
@@ -78,6 +88,8 @@
     private const int INIT_PERSONS_AMOUNT = 20;
     private const int DEFAULT_AMOUNT_OF_GENERATED_PER_SCROLL_PERSONS = 10;
     private const int DEFAULT_SEED = 123;
+
+    private const string CSV_FILE_NAME = "Persons.csv";
 
     private const Region DEFAULT_REGION = Region.pl;
     private const string REGION_PL_NAME = "POLAND";
@@ -111,10 +123,18 @@
 
     private void MistakesCountIsChangedHandler(string input)
     {
-        int parsedInput = (int)Math.Round(Double.Parse(input, CultureInfo.InvariantCulture));
-        if (parsedInput >= 0 && parsedInput <= 1000)
-            _currentAmountOfMistakes = parsedInput;
-        InitNewPersonsList();
+        double inputInDouble = Double.Parse(input, CultureInfo.InvariantCulture);
+        int result = (int)Math.Round(inputInDouble);
+        int numsAfterDot = (int)Math.Floor(inputInDouble * 100) / 100;
+        Random rand = new Random();
+        int roll = rand.Next(0, 100);
+        if (roll <= numsAfterDot)
+            result++;
+        if (result >= 0 && result <= 1000)
+        {
+            _currentAmountOfMistakes = result;
+            InitNewPersonsList();
+        }
     }
 
     private void SeedIsChangedEventHandler(string input)
@@ -134,6 +154,21 @@
             return;
         _currentSeed = parsedInt;
         InitNewPersonsList();
+    }
+
+    private void GenerateRandomSeed()
+    {
+        Random random = new();
+        _currentSeed = random.Next(0, Int32.MaxValue);
+        InitNewPersonsList();
+    }
+
+    private async void GetCsvFile()
+    {
+        MemoryStream csvStream = _personGeneratorService.GetPersonsInCsvFile();
+        var streamRef = new DotNetStreamReference(csvStream);
+        await JSRuntime.InvokeVoidAsync("downloadFileFromStream", CSV_FILE_NAME, streamRef);
+        csvStream.Close();
     }
 
     private void InitNewPersonsList()

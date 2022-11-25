@@ -15,6 +15,19 @@
           }
         }
       },
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authorization/6.0.10": {
         "type": "package",
         "dependencies": {
@@ -523,6 +536,19 @@
         },
         "runtime": {
           "lib/net6.0/Bogus.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
             "related": ".xml"
           }
         }
@@ -1038,6 +1064,30 @@
         "lib/netstandard1.3/Bogus.xml",
         "lib/netstandard2.0/Bogus.dll",
         "lib/netstandard2.0/Bogus.xml"
+      ]
+    },
+    "CsvHelper/30.0.1": {
+      "sha512": "rcZtgbWR+As4G3Vpgx0AMNmShGuQLFjkHAPIIflzrfkJCx8/AOd4m96ZRmiU1Wi39qS5UVjV0P8qdgqOo5Cwyg==",
+      "type": "package",
+      "path": "csvhelper/30.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "csvhelper.30.0.1.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net45/CsvHelper.dll",
+        "lib/net45/CsvHelper.xml",
+        "lib/net47/CsvHelper.dll",
+        "lib/net47/CsvHelper.xml",
+        "lib/net5.0/CsvHelper.dll",
+        "lib/net5.0/CsvHelper.xml",
+        "lib/net6.0/CsvHelper.dll",
+        "lib/net6.0/CsvHelper.xml",
+        "lib/netstandard2.0/CsvHelper.dll",
+        "lib/netstandard2.0/CsvHelper.xml",
+        "lib/netstandard2.1/CsvHelper.dll",
+        "lib/netstandard2.1/CsvHelper.xml"
       ]
     },
     "Microsoft.AspNetCore.Authorization/6.0.10": {
@@ -1803,6 +1853,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Bogus >= 34.0.2",
+      "CsvHelper >= 30.0.1",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.10",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.10"
     ]
@@ -1855,6 +1906,10 @@
           "Bogus": {
             "target": "Package",
             "version": "[34.0.2, )"
+          },
+          "CsvHelper": {
+            "target": "Package",
+            "version": "[30.0.1, )"
           },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",

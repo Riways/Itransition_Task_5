@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cZyCYZ4FnuwaQmVtuRcA4//5XBkMp4cmxS5ZGnpa2m0=",
+  "Hash": "mo5roP6xiucjR9VRZjlBJN1Nn+U7oH+Ozc+cvsqEiFI=",
   "Source": "Task_5",
   "BasePath": "/",
   "Mode": "Root",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\aqua-\\.nuget\\packages\\bogus\\34.0.2\\lib\\net6.0\\Bogus.dll"
+    },
+    {
+      "Identity": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\bin\\Debug\\net6.0\\wwwroot\\_framework\\CsvHelper.dll",
+      "SourceId": "Task_5",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/CsvHelper.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\aqua-\\.nuget\\packages\\csvhelper\\30.0.1\\lib\\net6.0\\CsvHelper.dll"
     },
     {
       "Identity": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\bin\\Debug\\net6.0\\wwwroot\\_framework\\dotnet.6.0.11.58twr8eken.js",
@@ -6577,6 +6594,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.NameResolution.dll"
+    },
+    {
+      "Identity": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\obj\\Debug\\net6.0\\build-gz\\wVuPYmRj.gz",
+      "SourceId": "Task_5",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/CsvHelper.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\bin\\Debug\\net6.0\\wwwroot\\_framework\\CsvHelper.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\bin\\Debug\\net6.0\\wwwroot\\_framework\\CsvHelper.dll"
     },
     {
       "Identity": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\obj\\Debug\\net6.0\\build-gz\\WXorlNeq.gz",

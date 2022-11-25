@@ -8,6 +8,7 @@
   "resources": {
     "assembly": {
       "Bogus.dll": "sha256-IgFEwQyP1GQSj7cjhmsEcYuEABesDe9Y3oby2kbVnnc=",
+      "CsvHelper.dll": "sha256-oh395MqwHOdv87ggl0L2cpWEDZZGFYe3CVUXnzSo8rY=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-gbA+AujHUUBawZgIGQVo3vLdHlkaD7QLRM0dStUecSM=",
       "Microsoft.AspNetCore.Components.dll": "sha256-+gNaJML9x0hS\/cLcBimAURDK\/S8nSWJZkTCaP5lgRys=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-uEDGfx46VmVIFGVu1clYPrq64JTRcayMUjUw1cr6Zck=",
@@ -197,13 +198,13 @@
       "mscorlib.dll": "sha256-cx\/3nJhFns3tZhQNQOyiRyKJESKxOjLVufzWnri6KSA=",
       "netstandard.dll": "sha256-yWufW5W4SSfjocBcWTEDqnFwTd\/VYtLMc2Y9mPmlggc=",
       "System.Private.CoreLib.dll": "sha256-H009wzPwRoDZlwvpN4KLCsUwN7Y1AmjKB3PIEHA7ObQ=",
-      "Task_5.dll": "sha256-IheAkHWKEUvYbX03AoX6rAoLDHfBYro3b5vCelN0YmI="
+      "Task_5.dll": "sha256-IHCnz+OZL5Bxn4YCGzj2XNhwISiLl5hn1a8Ei7BjtpI="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Task_5.pdb": "sha256-XgJoFnM+uF6IiLJmEdWdsP76wB5ZQhi1+PsKJL8zY\/I="
+      "Task_5.pdb": "sha256-hWw1OYVRA3\/gfeHVdTe32dIzK5nTQsGCNKjuHNRx2no="
     },
     "runtime": {
       "dotnet.6.0.11.58twr8eken.js": "sha256-F30V+6jU3jwJYFZoLuwMAqzTiOXu6q7zGgOdjYBofDI=",

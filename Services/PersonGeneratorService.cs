@@ -1,6 +1,9 @@
 ﻿using Bogus;
 using Bogus.DataSets;
 using Task_5.Models;
+using CsvHelper;
+using System.Globalization;
+using System.Runtime.Serialization;
 
 namespace Task_5.Services
 {
@@ -13,6 +16,7 @@ namespace Task_5.Services
     {
         public PersonModel GeneratePerson(int seed, Region region);
         public List<PersonModel> GeneratePersons(int seed, Region region, int amountOfPersons, int amountOfMistakes);
+        public MemoryStream GetPersonsInCsvFile();
     }
 
     public class PersonGeneratorService : IPersonGeneratorService
@@ -35,8 +39,8 @@ namespace Task_5.Services
         private const int BUILDING_NUMBER_MASK_MIN = 1;
         private const int BUILDING_NUMBER_MASK_MAX = 150;
 
-        private const int DEFAULT_SWITCH_MISTAKE_PROBABILITY_THERESHOLD = 970;
-        private const int DEFAULT_DELETE_MISTAKE_PROBABILITY_THERESHOLD = 980;
+        private const int DEFAULT_SWITCH_MISTAKE_PROBABILITY_THERESHOLD = 900;
+        private const int DEFAULT_DELETE_MISTAKE_PROBABILITY_THERESHOLD = 950;
         private const int DEFAULT_ADD_MISTAKE_PROBABILITY_THERESHOLD = 999;
 
         private int _currentSwitchProbabilityThreshold = DEFAULT_SWITCH_MISTAKE_PROBABILITY_THERESHOLD;
@@ -174,6 +178,16 @@ namespace Task_5.Services
                 phoneNumber = $"({LV_CODE}) {_faker.Random.UInt(LV_MIN_MASK, LV_MAX_MASK)}";
             }
             return phoneNumber;
+        }
+
+        public MemoryStream GetPersonsInCsvFile()
+        {
+            var stream = new MemoryStream();
+            var writer = new StreamWriter(stream);
+            var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
+            csv.WriteRecords(_currentListOfPersons);
+            stream.Position = 0;
+            return stream;
         }
     }
 }

@@ -5,10 +5,20 @@
 
 
 function isBottomOfScroll() {
-    let elementTop = $("#scrollBottom").offset().top;
-    let elementBottom = $("#scrollBottom").offset().bottom + 200;
+    let triggerArea = $("#scrollBottom").offset().top - 400;
     let parent = document.querySelector("#scrollWindow")
     let parentBottom = parent.getBoundingClientRect().bottom;
-    return elementTop <= parentBottom  || elementBottom <= parentBottom ;
+    return triggerArea <= parentBottom ;
 }
 
+window.downloadFileFromStream = async (fileName, contentStreamReference) => {
+    const arrayBuffer = await contentStreamReference.arrayBuffer();
+    const blob = new Blob([arrayBuffer]);
+    const url = URL.createObjectURL(blob);
+    const anchorElement = document.createElement('a');
+    anchorElement.href = url;
+    anchorElement.download = fileName ?? '';
+    anchorElement.click();
+    anchorElement.remove();
+    URL.revokeObjectURL(url);
+}

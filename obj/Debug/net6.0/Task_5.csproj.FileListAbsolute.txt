@@ -822,3 +822,7 @@ D:\Programming_scratch\.NET_PART\Projects\Itransition_course\C#\Task5\Task5\obj\
 D:\Programming_scratch\.NET_PART\Projects\Itransition_course\C#\Task5\Task5\obj\Debug\net6.0\refint\Task_5.dll
 D:\Programming_scratch\.NET_PART\Projects\Itransition_course\C#\Task5\Task5\obj\Debug\net6.0\Task_5.pdb
 D:\Programming_scratch\.NET_PART\Projects\Itransition_course\C#\Task5\Task5\obj\Debug\net6.0\ref\Task_5.dll
+D:\Programming_scratch\.NET_PART\Projects\Itransition_course\C#\Task5\Task5\bin\Debug\net6.0\wwwroot\_framework\CsvHelper.dll
+D:\Programming_scratch\.NET_PART\Projects\Itransition_course\C#\Task5\Task5\bin\Debug\net6.0\wwwroot\_framework\CsvHelper.dll.gz
+D:\Programming_scratch\.NET_PART\Projects\Itransition_course\C#\Task5\Task5\bin\Debug\net6.0\CsvHelper.dll
+D:\Programming_scratch\.NET_PART\Projects\Itransition_course\C#\Task5\Task5\obj\Debug\net6.0\build-gz\wVuPYmRj.gz
