@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OkkXpTWZhHirsVaaQQPTcqPoSQUQoVVs79OqwzHbp+nibSnKmgDcyUFlzAuxWHU+XSjSdSgamX7Ii++GhuDkPA==",
+  "dgSpecHash": "e9TS3faA03SfN0wILXalCHooCKJP0Fnp1kyXmJuFzwnsPRJrf96SiixOuE03pri3qUnmbTU2W+BiwoMwVNG4gw==",
   "success": true,
-  "projectFilePath": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\Task_5.csproj",
+  "projectFilePath": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\Task_5.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aqua-\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\aqua-\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.10\\microsoft.aspnetcore.authorization.6.0.10.nupkg.sha512",

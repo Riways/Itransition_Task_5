@@ -1,111 +1,111 @@
 {
   "Files": [
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\obj\\Debug\\net6.0\\build-gz\\QcX5CsNH.gz",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\obj\\Debug\\net6.0\\build-gz\\QcX5CsNH.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Task_5.styles.css",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Task_5.styles.css",
       "PackagePath": "staticwebassets\\Task_5.styles.css"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\css\\app.css",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\css\\open-iconic\\README.md",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\css\\open-iconic\\README.md",
       "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\favicon.ico",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\fr.svg",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\fr.svg",
       "PackagePath": "staticwebassets\\fr.svg"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\icon-192.png",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\index.html",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\js\\site.js",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\lv.svg",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\lv.svg",
       "PackagePath": "staticwebassets\\lv.svg"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\pl.svg",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\pl.svg",
       "PackagePath": "staticwebassets\\pl.svg"
     },
     {
-      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\wwwroot\\sample-data\\weather.json",
+      "Id": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {

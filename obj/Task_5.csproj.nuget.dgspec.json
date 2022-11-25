@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\Task_5.csproj": {}
+    "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\Task_5.csproj": {}
   },
   "projects": {
-    "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\Task_5.csproj": {
+    "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\Task_5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\Task_5.csproj",
+        "projectUniqueName": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\Task_5.csproj",
         "projectName": "Task_5",
-        "projectPath": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\Task_5.csproj",
+        "projectPath": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\Task_5.csproj",
         "packagesPath": "C:\\Users\\aqua-\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task_5_Blazor\\Task_5\\obj\\",
+        "outputPath": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
