@@ -36,8 +36,10 @@ namespace Task_5.Services
         private const int FR_MAX_MASK = 789999999;
         private const int LV_MIN_MASK = 21111111;
         private const int LV_MAX_MASK = 29999999;
-        private const int BUILDING_NUMBER_MASK_MIN = 1;
-        private const int BUILDING_NUMBER_MASK_MAX = 150;
+        private const int BUILDING_NUMBER_MIN = 1;
+        private const int BUILDING_NUMBER_MAX = 150;
+        private const int APARTMENT_NUMBER_MIN = 1;
+        private const int APARTMENT_NUMBER_MAX = 255;
 
         private const int DEFAULT_SWITCH_MISTAKE_PROBABILITY_THERESHOLD = 900;
         private const int DEFAULT_DELETE_MISTAKE_PROBABILITY_THERESHOLD = 950;
@@ -55,9 +57,12 @@ namespace Task_5.Services
             person.Fullname = _faker.Name.FullName();
             var city = _faker.Address.City();
             var street = _faker.Address.StreetName();
-            var buildingNumber = _faker.Random.UInt(BUILDING_NUMBER_MASK_MIN, BUILDING_NUMBER_MASK_MAX);
-            person.FullAddress = $"{city}, {street} {buildingNumber}";
-            person.PhoneNumber = GeneratePhoneNumber();
+            var buildingNumber = _faker.Random.Number(BUILDING_NUMBER_MIN, BUILDING_NUMBER_MAX);
+            var apartmentNumber = "";
+            int roll = _faker.Random.Number(10);
+            if (roll <= 4)
+                apartmentNumber = $", {_faker.Random.Number(APARTMENT_NUMBER_MIN,APARTMENT_NUMBER_MAX)}";
+            person.FullAddress = $"{city}, {street} {buildingNumber}{apartmentNumber}";
             person.Id = _faker.Random.Uuid().ToString();
             person.Num = _faker.IndexFaker;
             _faker.IndexFaker++;

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mo5roP6xiucjR9VRZjlBJN1Nn+U7oH+Ozc+cvsqEiFI=",
+  "Hash": "ipgt4f8jLh0TU0gkUHnosMcugYjhE60pXdT9dJ/NwdI=",
   "Source": "Task_5",
   "BasePath": "/",
   "Mode": "Root",
@@ -7291,23 +7291,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\pl.svg"
-    },
-    {
-      "Identity": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\sample-data\\weather.json",
-      "SourceId": "Task_5",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Programming_scratch\\.NET_PART\\Projects\\Itransition_course\\C#\\Task5\\Task5\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "sample-data/weather.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\sample-data\\weather.json"
     }
   ]
 }
