@@ -41,8 +41,8 @@ namespace Task_5.Services
         private const int APARTMENT_NUMBER_MIN = 1;
         private const int APARTMENT_NUMBER_MAX = 255;
 
-        private const int DEFAULT_SWITCH_MISTAKE_PROBABILITY_THERESHOLD = 900;
-        private const int DEFAULT_DELETE_MISTAKE_PROBABILITY_THERESHOLD = 950;
+        private const int DEFAULT_SWITCH_MISTAKE_PROBABILITY_THERESHOLD = 800;
+        private const int DEFAULT_DELETE_MISTAKE_PROBABILITY_THERESHOLD = 850;
         private const int DEFAULT_ADD_MISTAKE_PROBABILITY_THERESHOLD = 999;
 
         private int _currentSwitchProbabilityThreshold = DEFAULT_SWITCH_MISTAKE_PROBABILITY_THERESHOLD;

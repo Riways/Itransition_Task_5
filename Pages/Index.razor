@@ -43,7 +43,7 @@
         @onchange="@((ChangeEventArgs e) =>{MistakesCountIsChangedHandler(e.Value.ToString());})">
     </div>
     <div class="col-4 input-group" style="width: 33%">
-        <input placeholder="Mistakes" type="number" step="0.25"  class="form-control" max="1000" min="0"
+        <input placeholder="Mistakes" type="number" step="0.25"  class="form-control" max="10000" min="0"
            @oninput="@((ChangeEventArgs e) =>{MistakesCountIsChangedHandler(e.Value.ToString());})"/>
         <div class="input-group-prepend ">
               <span class="input-group-text" id="inputGroup-sizing-default">Mistakes</span>
@@ -87,7 +87,7 @@
 
     private const int INIT_PERSONS_AMOUNT = 20;
     private const int DEFAULT_AMOUNT_OF_GENERATED_PER_SCROLL_PERSONS = 10;
-    private const int DEFAULT_SEED = 123;
+    private const int DEFAULT_SEED = 0;
 
     private const string CSV_FILE_NAME = "Persons.csv";
 
@@ -130,11 +130,10 @@
         int roll = rand.Next(0, 100);
         if (roll <= numsAfterDot)
             result++;
-        if (result >= 0 && result <= 1000)
-        {
-            _currentAmountOfMistakes = result;
-            InitNewPersonsList();
-        }
+        if (result > 1000)
+            result = 1000;
+        _currentAmountOfMistakes = result;
+        InitNewPersonsList();
     }
 
     private void SeedIsChangedEventHandler(string input)
