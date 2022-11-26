@@ -65,6 +65,7 @@ namespace Task_5.Services
             person.FullAddress = $"{city}, {street} {buildingNumber}{apartmentNumber}";
             person.Id = _faker.Random.Uuid().ToString();
             person.Num = _faker.IndexFaker;
+            person.PhoneNumber = GeneratePhoneNumber();
             _faker.IndexFaker++;
             return person;
         }
